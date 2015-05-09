@@ -5,18 +5,18 @@
 
 <html>
 <head>
-<meta http-equiv="REFRESH" CONTENT="5;URL=view/login-form.jsp" >
+<meta http-equiv="REFRESH" CONTENT="5;URL=view/login.jsp" >
 <title>Login Fail</title>
 </head>
 <body>
-
+    <%HttpSession sesion=request.getSession();
+       out.print("sesion = " +sesion.getAttribute("userId") ); 
+    %>
+   
 <p>Error! usuario o contraseña incorrecta.</p>
 
-<a href="view/login-form.jsp">Volver al login</a>
+<a href="view/login.jsp">Volver al login</a>
 
-<%
-	ModeloLogin mlbean = (ModeloLogin)request.getAttribute("bean");	
-	out.print("<b> Seccion <br>Estado: </b>" + mlbean.isEstado());
-	%>
+
 </body>
 </html>

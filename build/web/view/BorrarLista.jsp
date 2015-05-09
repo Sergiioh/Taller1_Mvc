@@ -15,8 +15,8 @@
     <body>
         <form action ="../ControlLista" method="post">
             <br>    <br>
-            Nombre Lista :<input type="text" name="name"><br>
-            <br>
+            Nombre Lista :<input type="text" name="lista1">
+            
             <input type="submit" value="Eliminar">
         </form>
     </body>

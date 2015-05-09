@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpSession;
 
 import model.ModeloLogin;
 
@@ -21,7 +22,7 @@ public class ControlUsuario extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
-		
+		HttpSession sesion = request.getSession();
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		
@@ -29,16 +30,20 @@ public class ControlUsuario extends HttpServlet{
 		mlbean.setName(name);
 		mlbean.setPassword(password);
 		mlbean.ValidarLogin();
+                
 		
 		request.setAttribute("bean", mlbean);
 		
 		Boolean status = mlbean.isEstado();
 		
-		if(status){
-			RequestDispatcher rd = request.getRequestDispatcher("/view/login-ok.jsp");
+                
+		if(status == true){
+                        sesion.setAttribute("userId", mlbean.getId());
+			RequestDispatcher rd = request.getRequestDispatcher("/view/Principal.jsp");
 			rd.forward(request, response);
 		}
 		else{
+                        
 			RequestDispatcher rd = request.getRequestDispatcher("/view/login-fail.jsp");
 			rd.forward(request, response);	
 		}

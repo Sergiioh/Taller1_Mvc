@@ -4,6 +4,7 @@
     Author     : Sergioh
 --%>
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,7 +16,7 @@
     <body>
         <form action ="../ControlLista" method="post">
             <br>    <br>
-            Nombre Lista:<input type="text" name="name"><br>
+            Nombre Lista:<input type="text" name="lista"><br>
             <br>
             <input type="submit" value="Crear">
         </form>

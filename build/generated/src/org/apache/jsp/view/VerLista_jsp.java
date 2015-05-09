@@ -3,8 +3,12 @@ package org.apache.jsp.view;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Connection;
 
-public final class Principal_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class VerLista_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -44,23 +48,25 @@ public final class Principal_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>spotify</title\n");
-      out.write("\n");
+      out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h3>Listas De Reproduccion.<h3>\n");
+      out.write("      <select multiple class=\"form-control\">\n");
+      out.write("  <option>1</option>\n");
+      out.write("  <option>2</option>\n");
+      out.write("  <option>3</option>\n");
+      out.write("  <option>4</option>\n");
+      out.write("  <option>5</option>\n");
+      out.write("</select>\n");
       out.write("        \n");
-      out.write("        <form>\n");
-      out.write("            <input type=\"button\" value=\"Crear Lista\" onClick=\"window.location.href='CrearLista.jsp'\">\n");
-      out.write("            <br> </br>\n");
-      out.write("            <input type=\"button\" value=\"Eliminar Lista\" onClick=\"window.location.href='/BorrarLista.jsp'\">\n");
-      out.write("            <br> </br>\n");
-      out.write("            <input type=\"button\" value=\"Ver Listas de Reproduccion\" onClick=\"window.location.href='/VerLista.jsp'\">\n");
-      out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

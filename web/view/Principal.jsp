@@ -16,11 +16,11 @@
         <h3>Listas De Reproduccion.<h3>
         
         <form>
-            <input type="button" value="Crear Lista" onClick="window.location.href='CrearLista.jsp'">
+            <input type="button" value="Crear Lista" onClick="window.location.href='view/CrearLista.jsp'">
             <br> </br>
-            <input type="button" value="Eliminar Lista" onClick="window.location.href='BorrarLista.jsp'">
+            <input type="button" value="Eliminar Lista" onClick="window.location.href='view/BorrarLista.jsp'">
             <br> </br>
-            <input type="button" value="Ver Listas de Reproduccion" onClick="window.location.href='VerLista.j'">
+            <input type="button" value="Ver Listas de Reproduccion" onClick="window.location.href='view/VerLista.jsp'">
         </form>
     </body>
 </html>

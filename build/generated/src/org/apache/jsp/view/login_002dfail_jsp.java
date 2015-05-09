@@ -3,8 +3,9 @@ package org.apache.jsp.view;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import model.ModeloLogin;
 
-public final class login_002dform_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class login_002dfail_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -42,24 +43,26 @@ public final class login_002dform_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\n");
-      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n");
-      out.write("<html>\n");
-      out.write("    \n");
-      out.write("<head>\n");
-      out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("<title>Login</title\n");
       out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n");
+      out.write("\n");
+      out.write("<html>\n");
+      out.write("<head>\n");
+      out.write("<meta http-equiv=\"REFRESH\" CONTENT=\"5;URL=view/login.jsp\" >\n");
+      out.write("<title>Login Fail</title>\n");
       out.write("</head>\n");
       out.write("<body>\n");
-      out.write("    <br>\n");
-      out.write("<img src= \"http://cdn.marketplaceimages.windowsphone.com/v8/images/d2f646fb-2d2a-41d3-88f0-d4a6edd06c02?imageType=ws_icon_large\">\n");
-      out.write("</br>\n");
-      out.write("<form action =\"../ControlUsuario\" method=\"post\">\n");
-      out.write("    <br>    <br>\n");
-      out.write("Usuario:<input type=\"text\" name=\"name\"><br>\n");
-      out.write("Password:<input type=\"password\" name=\"password\"><br>\n");
-      out.write("<input type=\"submit\" value=\"login\">\n");
-      out.write("</form>\n");
+      out.write("    ");
+HttpSession sesion=request.getSession();
+       out.print("sesion = " +sesion.getAttribute("userId"); 
+    
+      out.write("\n");
+      out.write("   \n");
+      out.write("<p>Error! usuario o contraseña incorrecta.</p>\n");
+      out.write("\n");
+      out.write("<a href=\"view/login.jsp\">Volver al login</a>\n");
+      out.write("\n");
       out.write("\n");
       out.write("</body>\n");
       out.write("</html>");

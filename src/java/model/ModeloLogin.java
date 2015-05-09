@@ -8,7 +8,16 @@ import javax.swing.JOptionPane;
 public class ModeloLogin {
 
     private String name, password;
+    private String id = "0";
     private boolean estado = false;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -45,8 +54,11 @@ public class ModeloLogin {
             while (rt.next()) {
                 if (this.estado != true) {
                     this.estado = this.validate(rt.getString("user"), rt.getString("pass"));
+                    this.id = rt.getString("id");
                     System.out.println("3");
+                    
                 } else {
+                    this.id = "0";
                     break;
                 }
             }    
@@ -60,6 +72,7 @@ public class ModeloLogin {
         public Boolean validate(String nombre, String password){
 			if(name.equals(nombre) && this.password.equals(password)){ 
 				return true;
+                                
 			}
 			else{
 				

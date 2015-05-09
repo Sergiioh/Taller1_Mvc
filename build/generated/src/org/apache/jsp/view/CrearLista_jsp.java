@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class Principal_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class CrearLista_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -44,22 +44,22 @@ public final class Principal_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>spotify</title\n");
+      out.write("        <title>Nueva Lista de Reproduccion</title\n");
       out.write("\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h3>Listas De Reproduccion.<h3>\n");
-      out.write("        \n");
-      out.write("        <form>\n");
-      out.write("            <input type=\"button\" value=\"Crear Lista\" onClick=\"window.location.href='CrearLista.jsp'\">\n");
-      out.write("            <br> </br>\n");
-      out.write("            <input type=\"button\" value=\"Eliminar Lista\" onClick=\"window.location.href='/BorrarLista.jsp'\">\n");
-      out.write("            <br> </br>\n");
-      out.write("            <input type=\"button\" value=\"Ver Listas de Reproduccion\" onClick=\"window.location.href='/VerLista.jsp'\">\n");
+      out.write("        <form action =\"../ControlLista\" method=\"post\">\n");
+      out.write("            Usuario :  <input type=\"text\" name=\"user\">\n");
+      out.write("            <br>    <br>\n");
+      out.write("            Nombre Lista:<input type=\"text\" name=\"lista\"><br>\n");
+      out.write("            Nombre numero :<input type=\"text\" name=\"wolo\">\n");
+      out.write("            <br>\n");
+      out.write("            <input type=\"submit\" value=\"Crear\">\n");
       out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
